@@ -1,17 +1,13 @@
 <template>
-    <TopBar />
-    <Description />
+    <div id="description">
+        <h2>{{ $t("description.what_is") }}</h2>
+        <p> {{ $t("description.what_is_description") }} </p>
+    </div>
 </template>
 
 <script>
-import TopBar from './TopBar.vue';
-
     export default Vue.defineComponent({
-        name: 'App',
-        components: {
-            "TopBar": Vue.defineAsyncComponent(() => loadModule("src/components/TopBar.vue", options)),
-            "Description": Vue.defineAsyncComponent(() => loadModule("src/components/Description.vue", options)),
-        },
+        name: 'Description',
         setup() {
             //set up i18n
             const { t } = VueI18n.useI18n()
