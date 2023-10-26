@@ -1,11 +1,6 @@
 <template>
     <li class="CategoryOption">
-        <div class="CategoryTitle">
-            {{ title }}
-        </div>
-        <div class="CategoryDescription">
-            {{ description  }}
-        </div>
+        {{ title }}
     </li>
 </template>
 
@@ -13,10 +8,7 @@
     export default Vue.defineComponent({
         name: 'CategoryOption',
         props: {
-            category: {
-                title: String,
-                description: String
-            }
+            title: String
         },
         setup() {
             //set up i18n
