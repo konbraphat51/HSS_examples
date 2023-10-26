@@ -1,7 +1,5 @@
 <template>
-    <nav>
-        <LanguageSelection />
-    </nav>
+    <LanguageSelection />
     <div id="description">
         <h2>{{ $t("description.what_is") }}</h2>
         <p> {{ $t("description.what_is_description") }} </p>
