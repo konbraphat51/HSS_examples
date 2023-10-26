@@ -1,16 +1,16 @@
 <template>
     <TopBar />
     <Description />
+    <ExampleList />
 </template>
 
 <script>
-import TopBar from './TopBar.vue';
-
     export default Vue.defineComponent({
         name: 'App',
         components: {
-            "TopBar": Vue.defineAsyncComponent(() => loadModule("src/components/TopBar.vue", options)),
-            "Description": Vue.defineAsyncComponent(() => loadModule("src/components/Description.vue", options)),
+            "TopBar": Vue.defineAsyncComponent(() => loadModule("src/components/TopBar/TopBar.vue", options)),
+            "Description": Vue.defineAsyncComponent(() => loadModule("src/components/Description/Description.vue", options)),
+            "ExampleList": Vue.defineAsyncComponent(() => loadModule("src/components/ExampleList/ExampleList.vue", options)),
         },
         setup() {
             //set up i18n
@@ -19,20 +19,3 @@ import TopBar from './TopBar.vue';
         }
     })
 </script>
-
-<i18n>
-    {
-        "en": {
-            "description": {
-                "what_is": "What is HotSoupScript?",
-                "what_is_description": "This library enables programming beginers to make an artistic (especially game) programming easily."
-            }
-        },
-        "ja": {
-            "description": {
-                "what_is": "HotSoupScriptとは？",
-                "what_is_description": "このライブラリは、プログラミング初心者が簡単にグラフィカルな（特にゲーム）プログラミングを行えるようにするものです。"
-            }
-        }
-    }
-</i18n>

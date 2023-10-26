@@ -11,7 +11,7 @@
         name: 'TopBar',
         components: {
             "LanguageSelection": Vue.defineAsyncComponent(
-                () => loadModule("src/components/LanguageSelection.vue", options)
+                () => loadModule("src/components/TopBar/LanguageSelection.vue", options)
             ),
         }
     }
