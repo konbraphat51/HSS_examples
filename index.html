@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>HotSoupScript Examples</title>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+    <script src="https://unpkg.com/vue-i18n@8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue3-sfc-loader/dist/vue3-sfc-loader.js"></script>
+</head>
+<body>
+    <div id="app"></div>
+
+    <script>
+        //Vue loader
+        const options = {
+            moduleCache: {
+                vue: Vue
+            },
+            async getFile(url) {
+                
+                const res = await fetch(url);
+                if ( !res.ok )
+                throw Object.assign(new Error(res.statusText + ' ' + url), { res });
+                return {
+                getContentData: asBinary => asBinary ? res.arrayBuffer() : res.text(),
+                }
+            },
+            addStyle(textContent) {
+        
+                const style = Object.assign(document.createElement('style'), { textContent });
+                const ref = document.head.getElementsByTagName('style')[0] || null;
+                document.head.insertBefore(style, ref);
+            },
+        }
+
+        //Vue set upper
+        const { loadModule } = window["vue3-sfc-loader"];
+
+        const app = Vue.createApp(
+            Vue.defineAsyncComponent(
+                () => loadModule("./src/components/App.vue", options)
+            ),
+        )
+        app.mount('#app');
+    </script>
+</body>
+</html>
