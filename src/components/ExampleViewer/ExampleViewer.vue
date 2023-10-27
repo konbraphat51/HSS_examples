@@ -1,5 +1,7 @@
 <template>
-    <MainCanvas />
+    <div class="ExampleViewerEntity">
+        <MainCanvas />
+    </div>
 </template>
 
 <script>
