@@ -23,8 +23,8 @@
             options() {
                 return [
                     {
-                        title: "Move by Key",
-                        description: "Let your character move by pressing keys on the keyboard.\n You can learn usage of key inputing system"
+                        title: this.t("options.move_by_key.title"),
+                        description: this.t("options.move_by_key.description")
                     }
                 ]
             }
@@ -34,6 +34,22 @@
 
 <i18n>
     {
+        "en": {
+            "options": {
+                "move_by_key": {
+                    "title": "Move by Key",
+                    "description": "Let your character move by pressing keys on the keyboard.\n You can learn usage of key inputing system"
+                }
+            }
+        },
 
+        "ja": {
+            "options": {
+                "move_by_key": {
+                    "title": "キー入力で文字を動かす",
+                    "description": "キーボードのキーを押すことで文字を動かせます。\nキー入力システムの使い方を学べます。"
+                }
+            }
+        }
     }
 </i18n>
