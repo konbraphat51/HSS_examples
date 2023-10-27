@@ -2,6 +2,7 @@
     <div class="ExampleViewerEntity">
         <MainCanvas />
         <ScriptViwer />
+        <ExampleDescription />
     </div>
 </template>
 
@@ -15,6 +16,10 @@
 
             "ScriptViwer": Vue.defineAsyncComponent(
                 () => loadModule("src/components/ExampleViewer/ScriptViewer.vue", options)
+            ),
+
+            "ExampleDescription": Vue.defineAsyncComponent(
+                () => loadModule("src/components/ExampleViewer/ExampleDescription.vue", options)
             ),
         }
     }
