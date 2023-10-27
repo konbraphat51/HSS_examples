@@ -19,14 +19,11 @@
 
 <style>
     .NavigationBarEntity {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
         background-color: #98fb98;
         color: #000;
         padding: 0.5rem 1rem;
         position: sticky;
+        top: 0;
         z-index: 99999;
     }
 </style>
