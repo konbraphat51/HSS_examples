@@ -2,7 +2,7 @@
     <TopBar />
     <Description />
     <ExampleList :selected_example="selected_example" :example_descriptions="example_descriptions"/>
-    <ExampleViewer />
+    <ExampleViewer :selected_example="selected_example" :example_descriptions="example_descriptions"/>
 </template>
 
 <script>
