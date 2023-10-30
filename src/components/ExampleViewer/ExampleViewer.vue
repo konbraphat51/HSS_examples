@@ -31,7 +31,12 @@
             example_descriptions: {
                 type: Object,
                 required: true
-           }
+            },
+        },
+        data() {
+            return {
+                example_script: "",
+            }
         },
         computed: {
             title() {
@@ -43,6 +48,16 @@
                     return ""
                 }
             }
-        }
+        },
+        watch: {
+            selected_example: function (newID, oldID) {
+                //fetch selected script String
+                const path = "src/Examples/" + newID + "/script.js"
+                fetch(path)
+                    .then(data => {
+                        this.example_script = data
+                    })
+            }
+        },
     }
 </script>
