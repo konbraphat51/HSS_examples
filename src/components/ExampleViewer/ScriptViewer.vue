@@ -1,6 +1,6 @@
 <template>
     <div class="ScriptViwer">
-        <h3>Script:</h3>
+        <h3> {{t("title")}} </h3>
         <pre class="script"><code class="javascript">
 {{script_edited}}
         </code></pre>
@@ -70,6 +70,11 @@
                 return output
             }
         },
+        setup() {
+            //set up i18n
+            const { t } = VueI18n.useI18n()
+            return { t }
+        },
         updated() {
             //highlight code
             document.querySelectorAll('code').forEach((block) => {
@@ -78,3 +83,15 @@
         },
     }
 </script>
+
+<i18n>
+    {
+        "en":{
+            "title": "Script:"
+        },
+
+        "ja":{
+            "title": "コード:"
+        }
+    }
+</i18n>
