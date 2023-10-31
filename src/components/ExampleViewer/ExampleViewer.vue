@@ -3,7 +3,6 @@
         <h2> {{title}} </h2>
         <MainCanvas />
         <ScriptViwer :script="example_script"/>
-        <ExampleDescription />
     </div>
 </template>
 
@@ -17,11 +16,7 @@
 
             "ScriptViwer": Vue.defineAsyncComponent(
                 () => loadModule("src/components/ExampleViewer/ScriptViewer.vue", options)
-            ),
-
-            "ExampleDescription": Vue.defineAsyncComponent(
-                () => loadModule("src/components/ExampleViewer/ExampleDescription.vue", options)
-            ),
+            )
         },
         props: {
             selected_example: {
