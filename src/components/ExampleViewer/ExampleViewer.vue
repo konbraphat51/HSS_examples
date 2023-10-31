@@ -2,7 +2,7 @@
     <div class="ExampleViewerEntity">
         <h2> {{title}} </h2>
         <MainCanvas />
-        <ScriptViwer />
+        <ScriptViwer :script="example_script"/>
         <ExampleDescription />
     </div>
 </template>
@@ -50,14 +50,26 @@
             }
         },
         watch: {
-            selected_example: function (newID, oldID) {
+            selected_example: function (newVal, oldVal) {
+                this.loadScript()
+            }
+        },
+        methods: {
+            loadScript() {
                 //fetch selected script String
-                const path = "src/Examples/" + newID + "/script.js"
+                const path = "src/Examples/" + this.selected_example + "/script.js"
                 fetch(path)
+                    .then(response => {
+                        return response.text()
+                    })
                     .then(data => {
+                        //to string
                         this.example_script = data
                     })
             }
+        },
+        mounted() {
+            this.loadScript()
         },
     }
 </script>
