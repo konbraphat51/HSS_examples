@@ -1,7 +1,7 @@
 <template>
     <div class="ScriptViwer">
         <h3> {{t("title")}} </h3>
-        <pre class="script"><code class="javascript">
+        <pre class="script"><code ref="codeblock" class="javascript">
 {{script_edited}}
         </code></pre>
     </div>
@@ -77,9 +77,8 @@
         },
         updated() {
             //highlight code
-            document.querySelectorAll('code').forEach((block) => {
-                hljs.highlightBlock(block)
-            })
+            hljs.highlightBlock(this.$refs["codeblock"])
+            console.log(this.$refs["codeblock"])
         },
     }
 </script>
