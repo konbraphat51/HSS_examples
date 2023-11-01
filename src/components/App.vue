@@ -1,7 +1,7 @@
 <template>
     <TopBar />
     <Description />
-    <ExampleList :selected_example="selected_example" :example_descriptions="example_descriptions"/>
+    <ExampleList :selected_example="selected_example" :example_descriptions="example_descriptions" @onSelected="selectExample"/>
     <ExampleViewer :selected_example="selected_example" :example_descriptions="example_descriptions"/>
 </template>
 
@@ -43,6 +43,9 @@
                             this.example_descriptions[example] = data
                         })
                 }
+            },
+            selectExample(example) {
+                this.selected_example = example
             }
         }
     })

@@ -1,9 +1,9 @@
 <template>
     <div id="ExampleList">
         <CategorySelector />
-        <ul class="options">
-            <ExampleOption v-for="description in descriptions" v-bind:title="description.title" v-bind:description="description.option_description"/>
-        </ul>
+        <ol class="options">
+            <ExampleOption v-for="(description, id) in descriptions" v-bind:title="description.title" v-bind:description="description.option_description" :option-id="id" @onClick="select"/>
+        </ol>
     </div>
 </template>
 
@@ -36,6 +36,11 @@
                     output[example] = this.example_descriptions[example][i18n.global.locale.value]
                 }
                 return output
+            }
+        },
+        methods: {
+            select (example) {
+                this.$emit("onSelected", example)
             }
         },
     })

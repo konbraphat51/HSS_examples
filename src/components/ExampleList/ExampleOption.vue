@@ -1,6 +1,6 @@
 <template>
     <li>
-        <a>
+        <a @click="select">
             <div class="ExampleTitle">
                 {{ title }}
             </div>
@@ -17,6 +17,12 @@
         props: {
             title: String,
             description: String,
+            optionId: String,
+        },
+        methods: {
+            select () {
+                this.$emit("onClick", this.optionId)
+            }
         },
     }
 </script>
