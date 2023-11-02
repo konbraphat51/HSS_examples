@@ -1,8 +1,8 @@
 <template>
-    <TopBar />
+    <TopBar ref="TopBar"/>
     <Description />
     <ExampleList :selected_example="selected_example" :example_descriptions="example_descriptions" @onSelected="selectExample"/>
-    <ExampleViewer :selected_example="selected_example" :example_descriptions="example_descriptions"/>
+    <ExampleViewer ref="ExampleViewer" :selected_example="selected_example" :example_descriptions="example_descriptions"/>
 </template>
 
 <script>
@@ -46,6 +46,14 @@
             },
             selectExample(example) {
                 this.selected_example = example
+
+                //scroll
+                let header_height = this.$refs["TopBar"].$el.clientHeight
+                let destination = this.$refs["ExampleViewer"].$el.offsetTop - header_height
+                window.scrollTo({
+                    top: destination,
+                    behavior: "smooth"
+                })
             }
         }
     })
