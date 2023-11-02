@@ -78,7 +78,6 @@
         updated() {
             //highlight code
             hljs.highlightBlock(this.$refs["codeblock"])
-            console.log(this.$refs["codeblock"])
         },
     }
 </script>
