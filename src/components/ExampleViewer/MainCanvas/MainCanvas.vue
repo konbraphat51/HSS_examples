@@ -1,6 +1,6 @@
 <template>
     <StartButton />
-    <canvas id="canvas" width="800" height="600"></canvas>
+    <canvas ref="canvas" id="canvas" width="800" height="600"></canvas>
     <ScriptLoader :script="script" />
 </template>
 
@@ -20,6 +20,15 @@
                 type: String,
                 required: true
             }
+        },
+        mounted() {
+            //prevent moving page by key
+            window.addEventListener("keydown", function (e) {
+                // space and arrow keys
+                if (["ArrowUp", "ArrowDown", "ArrowRight", "ArrowLeft"].indexOf(e.key) > -1) {
+                    e.preventDefault();
+                }
+            }, false);
         },
     }
 </script>
