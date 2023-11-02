@@ -1,0 +1,10 @@
+{
+    "en": {
+        "title": "Hello Wolrd!",
+        "option_description": "Make an easiest program. Show a text on canvas"
+    },
+    "ja": {
+        "title": "Hello Wolrd!",
+        "option_description": "世界一簡単なプログラムを作りましょう。キャンバスに文字を表示します"
+    }
+}
