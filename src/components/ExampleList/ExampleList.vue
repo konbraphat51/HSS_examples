@@ -1,5 +1,6 @@
 <template>
     <div id="ExampleList">
+        <h2> {{ $t("ExampleList.title") }} </h2>
         <!-- UnderConstruction -->
         <!-- <CategorySelector /> -->
         <ol class="options">
@@ -46,3 +47,18 @@
         },
     })
 </script>
+
+<i18n>
+    {
+        "en": {
+            "ExampleList": {
+                "title": "Examples List"
+            }
+        },
+        "ja": {
+            "ExampleList": {
+                "title": "サンプル一覧"
+            }
+        }
+    }
+</i18n>
