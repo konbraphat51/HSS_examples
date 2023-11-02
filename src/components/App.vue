@@ -38,6 +38,7 @@
                 examples: [
                     "HelloWorld",
                     "ChangeColor",
+                    "ChangeFont",
                     "Movement",
                     "MoveByKey",
                 ],
