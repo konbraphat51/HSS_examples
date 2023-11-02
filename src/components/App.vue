@@ -41,6 +41,7 @@
                     "ChangeFont",
                     "Calculation",
                     "Variables",
+                    "Sleep",
                     "Movement",
                     "MoveByKey",
                 ],
