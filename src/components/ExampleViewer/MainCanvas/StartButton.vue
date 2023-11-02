@@ -1,7 +1,9 @@
 <template>
-    <div id="StartButton">
-        <button @click="toggle">{{ label }}</button>
-    </div>
+    <button 
+        id="StartButton"
+        @click="toggle">
+            {{ label }}
+    </button>
 </template>
 
 <script>
@@ -29,6 +31,9 @@
                         __stop = false
                     }
 
+                    //reset HSS condition
+                    SetColor("black")
+
                     StartAsync(main)
                 }
                 
@@ -48,6 +53,14 @@
                 } else {
                     return this.t("start")
                 }
+            },
+            color() {
+                if (this.isRunning) {
+                    return "#ff0000"
+                } else {
+                    return "#00ff00"
+                }
+            
             }
         }
     }
@@ -65,3 +78,16 @@
     }
 }
 </i18n>
+
+<style>
+    #StartButton {
+        background-color: v-bind(color);
+        border-radius: 10px;
+        padding: 10px;
+        border: 1px solid #000000;
+        width: 45%;
+    }
+    #StartButton:hover {
+        background-color: #65ccff;
+    }
+</style>
