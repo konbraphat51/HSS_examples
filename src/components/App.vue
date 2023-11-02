@@ -34,10 +34,11 @@
         data() {
             return {
                 examples: [
+                    "HelloWorld",
                     "Movement",
                     "MoveByKey",
                 ],
-                selected_example: "Movement",
+                selected_example: "HelloWorld",
                 example_descriptions: {}
             }
         },

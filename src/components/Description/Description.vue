@@ -28,3 +28,12 @@
         }
     }
 </i18n>
+
+<style>
+    #description {
+        margin: 10px 20px 10px 20px;
+        background-color: #faffdb;
+        border-radius: 10px;
+        padding: 10px;
+    }
+</style>
