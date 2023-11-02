@@ -1,0 +1,10 @@
+{
+    "en": {
+        "title": "Move by key",
+        "option_description": "Let your character move by pressing keys on the keyboard.\n You can learn usage of key inputing system"
+    },
+    "ja": {
+        "title": "キー入力で文字を移動させる",
+        "option_description": "キーボードのキーを押すことで文字を移動させます。\nキー入力システムの使い方を学べます。"
+    }
+}
