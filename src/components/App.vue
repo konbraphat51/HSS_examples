@@ -39,6 +39,7 @@
                     "HelloWorld",
                     "ChangeColor",
                     "ChangeFont",
+                    "Calculation",
                     "Movement",
                     "MoveByKey",
                 ],
