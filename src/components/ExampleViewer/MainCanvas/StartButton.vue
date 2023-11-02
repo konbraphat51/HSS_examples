@@ -33,6 +33,7 @@
 
                     //reset HSS condition
                     SetColor("black")
+                    SetFont("10px sans-serif")
 
                     StartAsync(main)
                 }
