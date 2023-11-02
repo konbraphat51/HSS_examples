@@ -1,5 +1,5 @@
 <template>
-    <StartButton />
+    <StartButton /> <ClearButton />
     <canvas ref="canvas" id="canvas" width="800" height="600"></canvas>
     <ScriptLoader :script="script" />
 </template>
@@ -13,7 +13,10 @@
             ),
             "StartButton": Vue.defineAsyncComponent(
                 () => loadModule("src/components/ExampleViewer/MainCanvas/StartButton.vue", options)
-            )
+            ),
+            "ClearButton": Vue.defineAsyncComponent(
+                () => loadModule("src/components/ExampleViewer/MainCanvas/ClearButton.vue", options)
+            ),
         },
         props: {
             script: {
