@@ -1,6 +1,8 @@
 <template>
     <div class="ExampleViewerEntity">
-        <h2> {{title}} </h2>
+        <h2 v-if="selected_example in example_descriptions">
+             {{ example_descriptions[selected_example]["title"] }} 
+        </h2>
         <MainCanvas :script="example_script"/>
         <ScriptViwer :script="example_script"/>
     </div>
@@ -31,17 +33,6 @@
         data() {
             return {
                 example_script: "",
-            }
-        },
-        computed: {
-            title() {
-                if (this.example_descriptions[this.selected_example] != undefined) {
-                    //fetched already
-                    return this.example_descriptions[this.selected_example][i18n.global.locale.value]["title"]
-                }else{
-                    //not fetched yet
-                    return ""
-                }
             }
         },
         watch: {

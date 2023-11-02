@@ -4,7 +4,14 @@
         <!-- UnderConstruction -->
         <!-- <CategorySelector /> -->
         <ol class="options">
-            <ExampleOption v-for="(description, id) in descriptions" v-bind:title="description.title" v-bind:description="description.option_description" :option-id="id" @onClick="select"/>
+            <!-- <ExampleOption v-for="(description, id) in descriptions" v-bind:title="description.title" v-bind:description="description.option_description" :option-id="id" @onClick="select"/> -->
+            <ExampleOption 
+                v-for="example in examples_loaded"  
+                :title="example_descriptions[example]['title']" 
+                :description="example_descriptions[example]['option_description']"
+                :option-id="example"
+                @onClick="select"
+            />
         </ol>
     </div>
 </template>
@@ -21,6 +28,14 @@
             const { t } = VueI18n.useI18n()
             return { t }
         },
+        mounted() {
+            this.update_examples_loaded()
+        },
+        data() {
+            return {
+                examples_loaded: []
+            }
+        },
         props: {
             selected_example: {
                 type: String,
@@ -29,22 +44,37 @@
             example_descriptions: {
                 type: Object,
                 required: true
-            }
-        },
-        computed: {
-            descriptions() {
-                let output = {}
-                for (let example in this.example_descriptions) {
-                    output[example] = this.example_descriptions[example][i18n.global.locale.value]
-                }
-                return output
+            },
+            example_list: {
+                type: Array,
+                required: true
             }
         },
         methods: {
             select (example) {
                 this.$emit("onSelected", example)
+            },
+            update_examples_loaded(){
+                //reset
+                this.examples_loaded.splice(0, this.examples_loaded.length)
+                
+                //add by order
+                for (let cnt = 0; cnt < this.example_list.length; cnt++) {
+                    let example = this.example_list[cnt]
+                    if (!!this.example_descriptions[example]) {
+                        this.examples_loaded.push(example)
+                    }
+                }
             }
         },
+        watch: {
+            example_descriptions: {
+                handler: function (newVal, oldVal) {
+                    this.update_examples_loaded()
+                },
+                deep: true
+            }
+        }
     })
 </script>
 

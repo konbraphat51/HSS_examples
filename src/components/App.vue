@@ -1,8 +1,17 @@
 <template>
     <TopBar ref="TopBar"/>
     <Description />
-    <ExampleList :selected_example="selected_example" :example_descriptions="example_descriptions" @onSelected="selectExample"/>
-    <ExampleViewer ref="ExampleViewer" :selected_example="selected_example" :example_descriptions="example_descriptions"/>
+    <ExampleList 
+        :selected_example="selected_example"
+        :example_descriptions="example_descriptions_locale"
+        :example_list="examples"
+        @onSelected="selectExample"
+    />
+    <ExampleViewer 
+        ref="ExampleViewer"
+        :selected_example="selected_example"
+        :example_descriptions="example_descriptions_locale"
+    />
 </template>
 
 <script>
@@ -54,6 +63,16 @@
                     top: destination,
                     behavior: "smooth"
                 })
+            }
+        },
+        computed: {
+            example_descriptions_locale() {
+                let locale = i18n.global.locale.value
+                let descriptions = {}
+                for (let example in this.example_descriptions) {
+                    descriptions[example] = this.example_descriptions[example][locale]
+                }
+                return descriptions
             }
         }
     })
