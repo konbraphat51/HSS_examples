@@ -33,7 +33,7 @@
                 //load HSS
                 if (!this.HSS_loaded) {
                     let loader_script = document.createElement("script")
-                    loader_script.setAttribute("src", "/HotSoupScript/Private/ModulesLoader.js")
+                    loader_script.setAttribute("src", "HotSoupScript/Private/ModulesLoader.js")
                     this.$refs["ScriptLoader"].appendChild(loader_script)
 
                     this.HSS_loaded = true
