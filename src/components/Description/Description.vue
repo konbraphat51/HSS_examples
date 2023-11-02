@@ -35,5 +35,6 @@
         background-color: #faffdb;
         border-radius: 10px;
         padding: 10px;
+        border: 1px solid #000000;
     }
 </style>
