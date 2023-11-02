@@ -1,6 +1,6 @@
 <template>
     <div class="ScriptViwer">
-        <h3> {{t("title")}} </h3>
+        <h3> {{t("ScriptViwer.title")}} </h3>
         <pre class="script"><code ref="codeblock" class="javascript">
 {{script_edited}}
         </code></pre>
@@ -85,11 +85,16 @@
 <i18n>
     {
         "en":{
-            "title": "Script:"
+            "ScriptViwer":{
+                "title": "Script:"
+            }
+            
         },
 
         "ja":{
-            "title": "コード:"
+            "ScriptViwer": {
+                "title": "コード:"
+            }
         }
     }
 </i18n>
