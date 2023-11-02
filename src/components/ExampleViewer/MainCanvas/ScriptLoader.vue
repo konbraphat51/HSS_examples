@@ -11,6 +11,11 @@
                 required: true
             },
         },
+        data() {
+            return {
+                HSS_loaded: false
+            }
+        },
         methods: {
             loadScript() {
                 //reload HSS / main script
@@ -19,17 +24,27 @@
                 //reset
                 this.removeFormerScript()
 
-                //load HSS
-                let loader_script = document.createElement("script")
-                loader_script.setAttribute("src", "/HotSoupScript/Private/ModulesLoader.js")
-                this.$refs["ScriptLoader"].appendChild(loader_script)
-                
-                //load main script
+                //prepare main script
                 let scriptLoader = this.$refs["ScriptLoader"]
                 let scriptUsing = this.script_edited
-                loader_script.onload = () => {
-                    let main_script = document.createElement("script")
-                    main_script.innerHTML = scriptUsing
+                let main_script = document.createElement("script")
+                main_script.innerHTML = scriptUsing
+
+                //load HSS
+                if (!this.HSS_loaded) {
+                    let loader_script = document.createElement("script")
+                    loader_script.setAttribute("src", "/HotSoupScript/Private/ModulesLoader.js")
+                    this.$refs["ScriptLoader"].appendChild(loader_script)
+
+                    this.HSS_loaded = true
+
+                    //load main script after HSS loaded
+                    loader_script.onload = () => {
+                        scriptLoader.appendChild(main_script)
+                    }
+                } else {
+                    //HSS already loaded
+                    //-> load main script immediately
                     scriptLoader.appendChild(main_script)
                 }
             },
