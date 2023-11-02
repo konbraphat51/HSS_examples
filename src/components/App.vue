@@ -12,6 +12,7 @@
         :selected_example="selected_example"
         :example_descriptions="example_descriptions_locale"
     />
+    <Footer />
 </template>
 
 <script>
@@ -22,6 +23,7 @@
             "Description": Vue.defineAsyncComponent(() => loadModule("src/components/Description/Description.vue", options)),
             "ExampleList": Vue.defineAsyncComponent(() => loadModule("src/components/ExampleList/ExampleList.vue", options)),
             "ExampleViewer": Vue.defineAsyncComponent(() => loadModule("src/components/ExampleViewer/ExampleViewer.vue", options)),
+            "Footer": Vue.defineAsyncComponent(() => loadModule("src/components/Footer/Footer.vue", options)),
         },
         setup() {
             //set up i18n
