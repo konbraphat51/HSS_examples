@@ -1,7 +1,7 @@
 <template>
     <div class="ExampleViewerEntity">
         <h2> {{title}} </h2>
-        <MainCanvas />
+        <MainCanvas :script="example_script"/>
         <ScriptViwer :script="example_script"/>
     </div>
 </template>
@@ -11,7 +11,7 @@
         name: 'ExampleViewer',
         components: {
             "MainCanvas": Vue.defineAsyncComponent(
-                () => loadModule("src/components/ExampleViewer/MainCanvas.vue", options)
+                () => loadModule("src/components/ExampleViewer/MainCanvas/MainCanvas.vue", options)
             ),
 
             "ScriptViwer": Vue.defineAsyncComponent(
