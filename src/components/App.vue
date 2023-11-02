@@ -42,6 +42,7 @@
                     "Calculation",
                     "Variables",
                     "Sleep",
+                    "For",
                     "Movement",
                     "MoveByKey",
                 ],
