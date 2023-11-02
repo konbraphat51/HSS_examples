@@ -1,5 +1,5 @@
 <template>
-    <li>
+    <li class="OptionCard">
         <a @click="select">
             <div class="ExampleTitle">
                 {{ title }}
@@ -26,3 +26,32 @@
         },
     }
 </script>
+
+<style>
+    .OptionCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        width: 80%;
+        height: 80%;
+        border: 1px solid #000000;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 10px;
+        background-color: #5eec60;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    }
+
+    .OptionCard:hover {
+        background-color: #549966;
+    }
+
+    .ExampleTitle {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .ExampleDescription {
+        font-size: 1em;
+    }
+</style>
