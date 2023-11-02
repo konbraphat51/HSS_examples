@@ -3,8 +3,8 @@
         <h2 v-if="selected_example in example_descriptions">
              {{ example_descriptions[selected_example]["title"] }} 
         </h2>
-        <MainCanvas :script="example_script"/>
         <ScriptViwer :script="example_script"/>
+        <MainCanvas :script="example_script"/>
     </div>
 </template>
 

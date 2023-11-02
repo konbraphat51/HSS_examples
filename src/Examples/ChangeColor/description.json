@@ -1,0 +1,10 @@
+{
+    "en": {
+        "title": "Change Color",
+        "option_description": "Change the color of your text"
+    },
+    "ja": {
+        "title": "変色",
+        "option_description": "表示した文字の色を変えましょう"
+    }
+}
