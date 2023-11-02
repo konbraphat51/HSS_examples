@@ -27,5 +27,7 @@
 <style>
     #canvas {
         border: 1px solid black;
+        width: 100%;
+        height: auto;
     }
 </style>
