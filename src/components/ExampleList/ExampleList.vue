@@ -1,6 +1,7 @@
 <template>
     <div id="ExampleList">
-        <CategorySelector />
+        <!-- UnderConstruction -->
+        <!-- <CategorySelector /> -->
         <ol class="options">
             <ExampleOption v-for="(description, id) in descriptions" v-bind:title="description.title" v-bind:description="description.option_description" :option-id="id" @onClick="select"/>
         </ol>
