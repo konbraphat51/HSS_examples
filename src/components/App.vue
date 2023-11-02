@@ -37,6 +37,7 @@
             return {
                 examples: [
                     "HelloWorld",
+                    "ChangeColor",
                     "Movement",
                     "MoveByKey",
                 ],
