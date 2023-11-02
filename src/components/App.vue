@@ -40,6 +40,7 @@
                     "ChangeColor",
                     "ChangeFont",
                     "Calculation",
+                    "Variables",
                     "Movement",
                     "MoveByKey",
                 ],

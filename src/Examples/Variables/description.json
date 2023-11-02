@@ -1,0 +1,10 @@
+{
+    "en": {
+        "title": "Variables; Remember your data",
+        "option_description": "Prepare a memory to remember your data. This is the CORE of programming"
+    },
+    "ja": {
+        "title": "変数 - 記憶 -",
+        "option_description": "プログラミングの核となる、データを記憶するためのメモリ「変数」を準備しよう"
+    }
+}
