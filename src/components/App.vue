@@ -43,6 +43,7 @@
                     "Variables",
                     "Sleep",
                     "For",
+                    "WhileTrue",
                     "Movement",
                     "MoveByKey",
                 ],

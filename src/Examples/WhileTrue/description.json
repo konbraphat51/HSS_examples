@@ -1,0 +1,10 @@
+{
+    "en": {
+        "title": "Infinite loop",
+        "option_description": "while(true); Loop until you turn off."
+    },
+    "ja": {
+        "title": "無限ループ",
+        "option_description": "while(true); 死ぬまで繰り返そう"
+    }
+}
