@@ -44,6 +44,7 @@
                     "Sleep",
                     "For",
                     "WhileTrue",
+                    "Rect",
                     "Movement",
                     "MoveByKey",
                 ],
