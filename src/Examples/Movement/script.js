@@ -1,4 +1,11 @@
 async function main() {
+    //en: This is the combination of "Infinite loop" and "Drawing a rectangle"
+    //en: Try think how you can move a letter without leave a trace
+    //en: It will be very satisfying if you come up with a solution
+    //ja: 「無限ループ」と「四角形を描く」のコラボレーションです
+    //ja: 先に、跡を残さずに文字を動かす方法を考えてみてください
+    //ja: 自分で分かったら気持ちいいですよ
+
     //en: make variable + set initial position here
     //ja: 変数を作り、ついでに初期位置を設定
     var x = 100;

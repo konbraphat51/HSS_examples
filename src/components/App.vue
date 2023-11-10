@@ -44,8 +44,10 @@
                     "Sleep",
                     "For",
                     "WhileTrue",
+                    "Rect",
                     "Movement",
                     "MoveByKey",
+                    "BulletGame"
                 ],
                 selected_example: "HelloWorld",
                 example_descriptions: {}
