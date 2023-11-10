@@ -1,0 +1,10 @@
+{
+    "en": {
+        "title": "Stop the Time",
+        "option_description": "Let's try pause your program for a sec. Give your program the sense of time"
+    },
+    "ja": {
+        "title": "時を止める",
+        "option_description": "プログラムを一時停止させてみましょう。これでプログラムに時間間隔が生まれてきます。"
+    }
+}

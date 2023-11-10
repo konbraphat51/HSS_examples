@@ -1,0 +1,10 @@
+{
+    "en": {
+        "title": "For; repeat your code",
+        "option_description": "You don't have to write same code again and again. Use for loop to repeat your code."
+    },
+    "ja": {
+        "title": "For - 繰り返し -",
+        "option_description": "同じコードを何度も書く必要はありません。forループを使ってコードを繰り返しましょう"
+    }
+}
