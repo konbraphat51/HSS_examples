@@ -1,26 +1,26 @@
 <template>
     <div id="footer">
         <p><a href="https://github.com/konbraphat51/HotSoupScript">
-            {{ t("footer.github") }}
-        </a></p>
+                {{ t("footer.github") }}
+            </a></p>
         <p><a href="https://github.com/konbraphat51/HSS_Template">
-            {{ t("footer.hss_template") }}
-        </a></p>
+                {{ t("footer.hss_template") }}
+            </a></p>
         <p><a href="https://github.com/konbraphat51">
-            {{ t("footer.c") }}
-        </a></p>
+                {{ t("footer.c") }}
+            </a></p>
     </div>
 </template>
 
 <script>
-    export default {
-        name: 'Footer',
-        setup() {
-            //set up i18n
-            const { t } = VueI18n.useI18n()
-            return { t }
-        }
+export default {
+    name: 'Footer',
+    setup() {
+        //set up i18n
+        const { t } = VueI18n.useI18n()
+        return { t }
     }
+}
 </script>
 
 <i18n>
@@ -43,9 +43,9 @@
 </i18n>
 
 <style>
-    #footer {
-        background-color: #faffdb;
+#footer {
+    background-color: #faffdb;
 
-        padding: 10px;
-    }
+    padding: 10px;
+}
 </style>
