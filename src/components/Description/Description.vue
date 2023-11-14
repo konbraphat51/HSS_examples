@@ -1,9 +1,7 @@
 <template>
     <div class="warning">
         <p>
-            <img src="src\images\description\mark_exclamation.png" 
-                width="15" 
-                height="15">
+            <img src="src\images\description\mark_exclamation.png" width="15" height="15">
             {{ $t("description.warning") }}
         </p>
     </div>
@@ -15,14 +13,14 @@
 </template>
 
 <script>
-    export default Vue.defineComponent({
-        name: 'Description',
-        setup() {
-            //set up i18n
-            const { t } = VueI18n.useI18n()
-            return { t }
-        }
-    })
+export default Vue.defineComponent({
+    name: 'Description',
+    setup() {
+        //set up i18n
+        const { t } = VueI18n.useI18n()
+        return { t }
+    }
+})
 </script>
 
 <i18n>
@@ -45,19 +43,19 @@
 </i18n>
 
 <style>
-    #description {
-        margin: 10px 20px 10px 20px;
-        background-color: #faffdb;
-        border-radius: 10px;
-        padding: 10px;
-        border: 1px solid #000000;
-    }
+#description {
+    margin: 10px 20px 10px 20px;
+    background-color: #faffdb;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #000000;
+}
 
-    .warning {
-        margin: 10px 20px 10px 20px;
-        background-color: #ffdbdb;
-        border-radius: 10px;
-        padding: 10px;
-        border: 1px solid #000000;
-    }
+.warning {
+    margin: 10px 20px 10px 20px;
+    background-color: #ffdbdb;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #000000;
+}
 </style>

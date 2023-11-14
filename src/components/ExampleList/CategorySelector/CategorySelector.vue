@@ -1,35 +1,35 @@
 <template>
     <div id="CategorySelector">
         <ul>
-            <CategoryOption v-for="category in categoryNames" v-bind:title="category"/>
+            <CategoryOption v-for="category in categoryNames" v-bind:title="category" />
         </ul>
     </div>
 </template>
 
 <script>
-    export default Vue.defineComponent({
-        name: 'ExampleList',
-        components:{
-            "CategoryOption": Vue.defineAsyncComponent(() => loadModule("src/components/ExampleList/CategorySelector/CategoryCard.vue", options)),
-        },
-        setup() {
-            //set up i18n
-            const { t } = VueI18n.useI18n()
+export default Vue.defineComponent({
+    name: 'ExampleList',
+    components: {
+        "CategoryOption": Vue.defineAsyncComponent(() => loadModule("src/components/ExampleList/CategorySelector/CategoryCard.vue", options)),
+    },
+    setup() {
+        //set up i18n
+        const { t } = VueI18n.useI18n()
 
-            return { t }
-        },
-        computed: {
-            categoryNames() {
-                //respond by language
-                return [
-                    this.t("all"),
-                    this.t("programming_tutorial"),
-                    this.t("HSS_tutorial"),
-                    this.t("SampleProducts")
-                ];
-            }
+        return { t }
+    },
+    computed: {
+        categoryNames() {
+            //respond by language
+            return [
+                this.t("all"),
+                this.t("programming_tutorial"),
+                this.t("HSS_tutorial"),
+                this.t("SampleProducts")
+            ];
         }
-    })
+    }
+})
 </script>
 
 <i18n>
